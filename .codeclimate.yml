@@ -1,0 +1,55 @@
+# Code Climate: code analysis for improvements. The analysis runs on the platform after the repository is connected;
+# CI only uploads the coverage report (see .github/workflows/ci.yml).
+
+version: "2"
+
+checks:
+  argument-count:
+    enabled: true
+  complex-logic:
+    enabled: true
+  file-lines:
+    enabled: true
+  method-complexity:
+    enabled: true
+    config:
+      threshold: 10
+  method-count:
+    enabled: true
+  method-lines:
+    enabled: true
+  nested-control-flow:
+    enabled: true
+  return-statements:
+    enabled: true
+  similar-code:
+    enabled: true
+  identical-code:
+    enabled: true
+
+plugins:
+  radon:
+    enabled: true
+    config:
+      python_version: 3
+  bandit:
+    enabled: true          # security: subprocess calls, eval, unsafe loads
+  duplication:
+    enabled: true
+    config:
+      languages:
+        python: {}
+  fixme:
+    enabled: true          # TODO/FIXME — shown in the report
+  markdownlint:
+    enabled: false         # spec documents are maintained by hand
+
+exclude_paths:
+  - "data/**"
+  - ".venv/**"
+  - "specs/**"
+  - ".specify/**"
+  - ".claude/**"
+  - "tests/fixtures/**"
+  - "**/__pycache__/**"
+  - "**/*.json"

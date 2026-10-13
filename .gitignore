@@ -1,0 +1,51 @@
+# Secrets (constitution V): .env is never committed; the .env.example template is committed
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environment (project .venv)
+.venv/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated data: the norm index and stored reports are not committed; data/laws/ is committed
+data/chroma/
+data/reports.db
+
+# Test and coverage output
+.coverage
+.coverage.*
+coverage.xml
+coverage/
+htmlcov/
+
+# Claude Code: the whole folder is local tooling and is not committed
+.claude/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Editors / IDE
+.idea/
+.vscode/
+*.swp

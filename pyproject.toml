@@ -1,0 +1,32 @@
+# Project tool configuration. Dependencies are in requirements.txt (pinned versions, see the plan).
+
+[project]
+name = "contrato-review"
+version = "0.1.0"
+description = "Review of Argentine sale and lease contracts (CABA, Phase 0)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "integration: requires a built Chroma index and the local embedding model",
+]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = [
+    "src/**/__main__.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+]
+
+[tool.coverage.xml]
+output = "coverage.xml"

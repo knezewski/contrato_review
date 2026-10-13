@@ -1,0 +1,56 @@
+[
+  {
+    "article": "sellos-compraventa-vivienda-unica",
+    "title": "Impuesto de sellos — compraventa de vivienda única",
+    "jurisdiction": "CABA",
+    "contract_type": "compraventa",
+    "regime": "Ley Tarifaria CABA 2026 (ley 6927/25)",
+    "valid_from": "2026-01-01",
+    "valid_to": null,
+    "kind": "tax",
+    "params": {
+      "threshold_ars": 226100000,
+      "rate_excess": 0.035,
+      "split": {"buyer": 0.5, "seller": 0.5},
+      "base": "max(price, valuacion_fiscal)"
+    },
+    "source_url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6927-25-ANX.pdf",
+    "verbatim": false,
+    "note": "Paráfrasis fiel de la Ley Tarifaria 2026 vía fuente notarial; reemplazar por el texto literal del anexo antes de producción. Parámetros tomados del texto de esta misma entrada; verificar contra el anexo.",
+    "text": "Impuesto de sellos. La compraventa de vivienda única, familiar y de ocupación permanente de hasta $226.100.000 está exenta del impuesto de sellos, y la exención beneficia a ambas partes. Si el valor supera ese tope, se tributa el 3,5% solo sobre el excedente. El impuesto se divide en 50% comprador y 50% vendedor y se calcula sobre el mayor valor entre el precio de la operación y la valuación fiscal del inmueble."
+  },
+  {
+    "article": "sellos-compraventa-no-vivienda-unica",
+    "title": "Impuesto de sellos — compraventa que no es vivienda única",
+    "jurisdiction": "CABA",
+    "contract_type": "compraventa",
+    "regime": "Ley Tarifaria CABA 2026 (ley 6927/25)",
+    "valid_from": "2026-01-01",
+    "valid_to": null,
+    "kind": "tax",
+    "params": {
+      "rate": 0.027,
+      "split": {"buyer": 0.5, "seller": 0.5},
+      "base": "max(price, valuacion_fiscal)"
+    },
+    "source_url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6927-25-ANX.pdf",
+    "verbatim": false,
+    "note": "Paráfrasis fiel; reemplazar por texto literal del anexo antes de producción. Parámetros tomados del texto de esta misma entrada; verificar contra el anexo.",
+    "text": "Impuesto de sellos. La compraventa de inmueble que no califique como vivienda única (por ejemplo, segunda vivienda) tributa una alícuota del 2,7% (reducida desde el 3,5% anterior), dividida en 50% comprador y 50% vendedor, calculada sobre el mayor valor entre el precio y la valuación fiscal. El Impuesto a la Transferencia de Inmuebles (ITI) fue derogado por la ley 27.743 en julio de 2024."
+  },
+  {
+    "article": "sellos-locacion",
+    "title": "Impuesto de sellos — contratos de locación",
+    "jurisdiction": "CABA",
+    "contract_type": "locacion",
+    "regime": "Ley Tarifaria CABA 2026 (ley 6927/25)",
+    "valid_from": "2026-01-01",
+    "valid_to": null,
+    "kind": "tax",
+    "params": null,
+    "source_url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6927-25-ANX.pdf",
+    "verbatim": false,
+    "note": "PENDIENTE: confirmar alícuota de sellos sobre locaciones y exenciones para vivienda en la Ley Tarifaria 2026 antes de usar. Sin parámetros hasta su confirmación; el informe muestra la tasa como pendiente.",
+    "text": "Impuesto de sellos sobre contratos de locación de inmuebles en CABA. Alícuota y exenciones (en particular para locación con destino de vivienda) a confirmar en la Ley Tarifaria vigente. [COMPLETAR CON TEXTO OFICIAL]"
+  }
+]

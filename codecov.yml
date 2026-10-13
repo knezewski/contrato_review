@@ -1,0 +1,33 @@
+# Codecov: where to improve the tests. coverage.xml is uploaded from CI (.github/workflows/ci.yml).
+# Constitution V: the service receives only source code and the coverage report; data and secrets are excluded.
+
+codecov:
+  require_ci_to_pass: true
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+  status:
+    project:
+      default:
+        target: auto        # not below the current level of the branch
+        threshold: 1%
+    patch:
+      default:
+        target: 80%         # new lines in a PR must be 80% covered
+
+# Exclude from coverage and do not send as sources:
+ignore:
+  - "data/**"
+  - ".venv/**"
+  - "specs/**"
+  - ".specify/**"
+  - ".claude/**"
+  - "tests/fixtures/**"
+  - "**/__main__.py"
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: true

@@ -1,0 +1,18 @@
+# Runtime dependencies. Direct dependencies are pinned; transitive ones are installed by pip.
+# Versions taken from the project .venv (uv pip freeze), see tasks.md T001.
+
+fastapi==0.143.0
+python-multipart==0.0.32
+uvicorn==0.54.0
+pydantic==2.14.1
+pydantic-settings==2.15.0
+chromadb==1.5.9
+sentence-transformers==6.1.0
+torch==2.14.1
+transformers==5.19.0
+pymupdf==1.28.2
+python-docx==1.2.0
+pytesseract==0.3.13
+pdf2image==1.17.0
+anthropic==1.13.0
+httpx==0.28.1

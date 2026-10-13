@@ -1,0 +1,14 @@
+[
+  {"es": "locación", "en": "lease", "ru": "аренда"},
+  {"es": "locador", "en": "lessor", "ru": "арендодатель"},
+  {"es": "locatario", "en": "lessee", "ru": "арендатор"},
+  {"es": "compraventa", "en": "sale", "ru": "купля-продажа"},
+  {"es": "vendedor", "en": "seller", "ru": "продавец"},
+  {"es": "comprador", "en": "buyer", "ru": "покупатель"},
+  {"es": "impuesto de sellos", "en": "stamp tax", "ru": "гербовый сбор"},
+  {"es": "vivienda única", "en": "sole residence", "ru": "единственное жильё"},
+  {"es": "valuación fiscal", "en": "tax valuation", "ru": "фискальная оценка"},
+  {"es": "cláusula", "en": "clause", "ru": "пункт"},
+  {"es": "expensas", "en": "building fees", "ru": "коммунальные взносы"},
+  {"es": "depósito en garantía", "en": "security deposit", "ru": "залог"}
+]

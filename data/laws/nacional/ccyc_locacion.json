@@ -1,0 +1,52 @@
+[
+  {
+    "article": "1198",
+    "title": "Plazo mínimo de la locación de inmueble",
+    "jurisdiction": "nacional",
+    "contract_type": "locacion",
+    "regime": "Ley 27.551",
+    "valid_from": "2020-07-01",
+    "valid_to": "2023-12-29",
+    "source_url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/335000-339999/339378/norma.htm",
+    "verbatim": true,
+    "text": "Plazo mínimo de la locación de inmueble. El contrato de locación de inmueble, cualquiera sea su destino, si carece de plazo expreso y determinado mayor, se considera celebrado por el plazo mínimo legal de tres (3) años, excepto los casos del artículo 1199. El locatario puede renunciar a este plazo si está en la tenencia de la cosa."
+  },
+  {
+    "article": "1198",
+    "title": "Plazo mínimo de la locación",
+    "jurisdiction": "nacional",
+    "contract_type": "locacion",
+    "regime": "DNU 70/2023",
+    "valid_from": "2023-12-30",
+    "valid_to": null,
+    "source_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/301122/20231221",
+    "verbatim": false,
+    "note": "Paráfrasis fiel de la modificación del DNU; reemplazar por el texto literal del decreto antes de producción.",
+    "text": "Plazo mínimo de la locación. En las locaciones con cualquier destino el plazo mínimo será el que las partes hayan establecido. Si no se estableció plazo: (i) en locaciones temporales, se aplican los usos y costumbres del lugar; (ii) en alquileres con destino a vivienda permanente, será de dos (2) años; y (iii) para otros destinos, será de tres (3) años."
+  },
+  {
+    "article": "1221",
+    "title": "Resolución anticipada",
+    "jurisdiction": "nacional",
+    "contract_type": "locacion",
+    "regime": "Ley 27.551",
+    "valid_from": "2020-07-01",
+    "valid_to": "2023-12-29",
+    "source_url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/335000-339999/339378/norma.htm",
+    "verbatim": true,
+    "text": "Resolución anticipada. El contrato de locación puede ser resuelto anticipadamente por el locatario: a) Si la cosa locada es un inmueble y han transcurrido seis (6) meses de contrato, debiendo notificar en forma fehaciente su decisión al locador con al menos un (1) mes de anticipación. Si hace uso de la opción resolutoria en el primer año de vigencia de la relación locativa, debe abonar al locador, en concepto de indemnización, la suma equivalente a un (1) mes y medio de alquiler al momento de desocupar el inmueble y la de un (1) mes si la opción se ejercita transcurrido dicho lapso. En los contratos de inmuebles destinados a vivienda, cuando la notificación al locador se realiza con una anticipación de tres (3) meses o más, transcurridos al menos seis (6) meses de contrato, no corresponde el pago de indemnización alguna por dicho concepto. b) En los casos del artículo 1199, debiendo abonar al locador el equivalente a dos (2) meses de alquiler."
+  },
+  {
+    "article": "1221",
+    "title": "Resolución anticipada",
+    "jurisdiction": "nacional",
+    "contract_type": "locacion",
+    "regime": "DNU 70/2023",
+    "valid_from": "2023-12-30",
+    "valid_to": null,
+    "source_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/301122/20231221",
+    "verbatim": false,
+    "note": "Paráfrasis fiel de la modificación del DNU; reemplazar por el texto literal del decreto antes de producción.",
+    "text": "Resolución anticipada. El locatario podrá, en cualquier momento, resolver el contrato abonando al locador el equivalente al diez por ciento (10%) del saldo del canon locativo futuro, calculado desde la fecha de la notificación de la rescisión hasta la fecha de finalización pactada en el contrato."
+  }
+]

@@ -1,0 +1,73 @@
+# CI: tests with coverage → Codecov and Code Climate.
+# Secrets in the repository settings: CODECOV_TOKEN, CC_TEST_REPORTER_ID. ANTHROPIC_API_KEY is not needed in CI:
+# analysis tests use a fake model. Contract tests load the embedding model
+# intfloat/multilingual-e5-large (about 2.2 GB), which is cached between runs. Integration tests do not run in CI
+# (they build the index in a temporary directory and also need the model; they run locally).
+
+name: ci
+
+on:
+  push:
+    branches: [main, "001-*"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Cache embedding model (Hugging Face hub)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-intfloat-multilingual-e5-large-v1
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Run unit and contract tests with coverage
+        run: |
+          pytest tests/unit tests/contract \
+            --cov=src --cov-branch --cov-report=xml --cov-report=term-missing
+
+      - name: Upload coverage to Codecov
+        if: always()
+        uses: codecov/codecov-action@v5
+        continue-on-error: true
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage.xml
+          fail_ci_if_error: false
+
+      - name: Download Code Climate test reporter
+        if: always()
+        continue-on-error: true
+        run: |
+          curl -fsSL -o cc-test-reporter https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+          chmod +x cc-test-reporter
+
+      - name: Upload coverage to Code Climate
+        if: always()
+        continue-on-error: true
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        run: |
+          ./cc-test-reporter format-coverage -t coverage.py -o coverage/codeclimate.json coverage.xml
+          ./cc-test-reporter upload-coverage -i coverage/codeclimate.json
